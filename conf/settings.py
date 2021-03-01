@@ -25,7 +25,7 @@ SECRET_KEY = 'ajbvu&s30+d=#c(et431ra&&oz&&0c#1#8z63&(*1list33zwy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '95.214.63.171']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'holidaydb',
+        'USER': 'admin',
+        'PASSWORD': 'Holiday2021',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
