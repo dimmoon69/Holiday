@@ -24,10 +24,10 @@ jobs:
         command: |
           cd holiday
           ls -a
-#        host: ${{secrets.HOST}}
-#        user: dima
-#        pass: ${{secrets.PRIVATE_KEY}}
-#        args: "-tt -vvv"
+        host: ${{secrets.HOST}}
+        user: dima
+        pass: ${{secrets.PRIVATE_KEY}}
+        args: "-tt -vvv"
 
 
 
