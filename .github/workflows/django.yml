@@ -23,7 +23,8 @@ jobs:
       with:
         command: |
           cd holiday
-          ls -a
+          git pull
+          supervisorctl restart holiday_wsgi
         host: ${{secrets.HOST}}
         user: dima
         pass: ${{secrets.PRIVATE_KEY}}
