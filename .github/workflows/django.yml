@@ -18,11 +18,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: ls -a via ssh
+    - name: Deploy to server
       uses: fifsky/ssh-action@master
       with:
         command: |
           cd Holiday
+          git fetch --all
           git pull
           supervisorctl restart holiday_wsgi
         host: ${{secrets.HOST}}
